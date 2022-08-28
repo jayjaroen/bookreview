@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   def slugify
     self.slug = name.parameterize
   end
-  # find slug method
+  # find slug method hyphenate the name
 
   def avg_score
     reviews.average(:score).round(2).to_f
